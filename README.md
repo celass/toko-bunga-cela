@@ -31,7 +31,7 @@ Koneksi internet dibutuhkan agar font Google (Fraunces dan DM Sans) termuat. Tan
 
 | Yang diubah | Lokasi |
 |---|---|
-| Nama | Cari `Nama Kamu` di `index.html` (judul, logo, hero, footer) |
+| Nama | Cari `flowers shop` di `index.html` (judul, logo, hero, footer) |
 | Profesi dan cerita | Teks `[profesi / peran kamu]` dan bagian `#tentang` di `index.html` |
 | Keahlian | Daftar `<li>` di bagian `#taman` |
 | Karya | Daftar `<li>` di bagian `#buket` |
