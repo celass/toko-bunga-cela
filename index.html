@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nama Kamu — Toko Bunga Pribadi</title>
+  <meta name="description" content="Website pribadi bertema toko bunga.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,400;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#atas">Nama Kamu</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav">
+      <a href="#tentang">Tentang</a>
+      <a href="#taman">Keahlian</a>
+      <a href="#buket">Karya</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <main id="atas">
+    <section class="hero">
+      <div class="hero-text">
+        <p class="lead">Selamat datang di toko bunga milik</p>
+        <h1>Nama Kamu</h1>
+        <p>Saya [profesi / peran kamu]. Di sini saya merangkai cerita, keahlian, dan karya, seperti merangkai buket.</p>
+        <p class="picker-label" id="picker-label">Pilih bunga hari ini:</p>
+        <div class="picker" role="group" aria-labelledby="picker-label">
+          <button data-bloom="#D63A74" data-soft="#F9DCE6" data-on="#fff" aria-pressed="true">Mawar</button>
+          <button data-bloom="#7B5EA7" data-soft="#E8E0F3" data-on="#fff" aria-pressed="false">Lavender</button>
+          <button data-bloom="#F0B429" data-soft="#FCEFC7" data-on="#2B1B2E" aria-pressed="false">Matahari</button>
+          <button data-bloom="#3E8E7E" data-soft="#D9EEE9" data-on="#fff" aria-pressed="false">Eukaliptus</button>
+        </div>
+      </div>
+      <svg class="flower" viewBox="-110 -110 220 220" role="img" aria-label="Ilustrasi bunga">
+        <defs><ellipse id="petal" cx="0" cy="-52" rx="24" ry="50"/></defs>
+        <g class="petals">
+          <use href="#petal"/><use href="#petal" transform="rotate(45)"/>
+          <use href="#petal" transform="rotate(90)"/><use href="#petal" transform="rotate(135)"/>
+          <use href="#petal" transform="rotate(180)"/><use href="#petal" transform="rotate(225)"/>
+          <use href="#petal" transform="rotate(270)"/><use href="#petal" transform="rotate(315)"/>
+        </g>
+        <circle class="core" r="20"/>
+      </svg>
+    </section>
+
+    <section id="tentang" class="section">
+      <h2>Tentang saya</h2>
+      <p>Ceritakan dirimu di sini: dari mana kamu berasal, apa yang kamu kerjakan, dan apa yang membuatmu bersemangat. Dua atau tiga kalimat sudah cukup.</p>
+      <p>Di luar pekerjaan, saya suka [hobi kamu].</p>
+    </section>
+
+    <section id="taman" class="section">
+      <h2>Keahlian di taman saya</h2>
+      <ul class="skills">
+        <li>Keahlian pertama</li>
+        <li>Keahlian kedua</li>
+        <li>Keahlian ketiga</li>
+        <li>Keahlian keempat</li>
+        <li>Keahlian kelima</li>
+      </ul>
+    </section>
+
+    <section id="buket" class="section">
+      <h2>Karya pilihan</h2>
+      <ul class="menu-board">
+        <li><div><h3>Nama karya satu</h3><p>Deskripsi singkat: apa yang kamu buat dan untuk siapa.</p></div><span>2025</span></li>
+        <li><div><h3>Nama karya dua</h3><p>Deskripsi singkat: apa yang kamu buat dan untuk siapa.</p></div><span>2024</span></li>
+        <li><div><h3>Nama karya tiga</h3><p>Deskripsi singkat: apa yang kamu buat dan untuk siapa.</p></div><span>2023</span></li>
+      </ul>
+    </section>
+
+    <section id="kontak" class="section">
+      <h2>Kirim pesan</h2>
+      <form id="form" novalidate>
+        <label for="nama">Nama</label>
+        <input id="nama" name="nama" autocomplete="name" required>
+        <label for="pesan">Pesan</label>
+        <textarea id="pesan" name="pesan" rows="4" required></textarea>
+        <p class="error" id="error" role="alert"></p>
+        <button type="submit">Kirim lewat email</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>© <span id="tahun"></span> Nama Kamu. Dirangkai dengan HTML, CSS, dan JavaScript.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
